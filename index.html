@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Studium — Thư viện & đối thoại triết học</title>
+<meta name="description" content="Studium: giới thiệu, nghiên cứu và bàn luận sâu về triết học Đông — Tây." />
+<link rel="stylesheet" href="atelier.css" />
+<style>
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--paper) 93%,transparent);backdrop-filter:blur(10px);border-bottom:1px dotted var(--line)}
+.site-nav .wrap{display:flex;align-items:center;gap:30px;padding-top:15px;padding-bottom:15px}
+.brand{font-family:var(--sans);font-weight:800;font-size:20px;text-decoration:none;color:inherit}.brand i{color:var(--coral);font-style:normal}
+.site-nav .links{display:flex;gap:22px;margin-left:auto;font-size:14.5px;font-weight:600}
+.site-nav .links a{text-decoration:none;color:inherit;opacity:.75}.site-nav .links a[aria-current]{opacity:1;border-bottom:2px solid var(--coral)}
+.launcher{max-width:1180px;margin:0 auto;padding:56px 28px 96px}
+.launcher-head{border-bottom:1px dotted var(--line);padding-bottom:28px;margin-bottom:36px}
+.launcher-head .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute)}
+.launcher-head h1{font-family:var(--sans);font-weight:800;font-size:clamp(30px,4.2vw,52px);line-height:1.1;letter-spacing:-.015em;margin:12px 0}
+.launcher-head h1 em{font-family:var(--serif);font-style:italic;font-weight:500}
+.launcher-head h1 .dot{color:var(--coral)}
+.launcher-head p{max-width:62ch;color:var(--ink-mute);font-size:17px;line-height:1.7}
+.page-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.page-card{display:grid;grid-template-columns:200px 1fr;background:var(--bone);border:1px solid var(--line-soft);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
+.page-card img{width:100%;height:100%;min-height:190px;object-fit:cover;display:block}
+.page-card .body{padding:24px 24px 20px;display:flex;flex-direction:column;gap:10px}
+.page-card .num{font-family:var(--mono);font-size:12px;color:var(--coral);letter-spacing:.14em;text-transform:uppercase}
+.page-card h2{font-family:var(--sans);font-size:clamp(22px,2.4vw,26px);line-height:1.15;font-weight:750;letter-spacing:-.01em}
+.page-card h2 em{font-family:var(--serif);font-style:italic;font-weight:500}
+.page-card p{color:var(--ink-mute);font-size:15px;line-height:1.7}
+.page-card .go{margin-top:auto;font-weight:700;font-size:14px}
+.page-card .go span{color:var(--coral)}
+.page-card:hover{transform:translateY(-3px);transition:transform .25s ease}
+@media(max-width:880px){.page-grid{grid-template-columns:1fr}.page-card{grid-template-columns:1fr}.page-card img{max-height:220px}.site-nav .links{display:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Điều hướng chính"><div class="wrap">
+<a class="brand" href="trang-chu.html">Studium<i>.</i></a>
+<div class="links"><a href="trang-chu.html">Trang chủ</a><a href="thu-vien.html">Thư viện</a><a href="doi-thoai.html">Đối thoại</a><a href="chuyen-de.html">Chuyên đề</a><a href="su-kien.html">Sự kiện</a></div><button class="theme-btn" type="button" aria-label="Bật chế độ tối" title="Tối / sáng">☾</button><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button></div></nav>
+<main class="launcher">
+<header class="launcher-head" data-od-id="launcher-head">
+<div class="kicker">Tập I · Triết học Đông — Tây · 2026</div>
+<h1>Studium — nơi <em>tư tưởng</em> soi chiếu tồn tại<span class="dot">.</span></h1>
+<p>Một website giới thiệu, nghiên cứu và bàn luận sâu về triết học: thư viện luận giải, phòng đối thoại kiểu Lyceum và chuyên đề dài kỳ có chú thích đầy đủ. Tám cửa dưới đây: bốn lối vào chính, hai kỳ chuyên đề mới, lịch sự kiện và biên bản đọc chung.</p>
+</header>
+<div class="page-grid">
+<a class="page-card" href="trang-chu.html" data-od-id="launcher-card-home">
+<img src="assets/hero.png" alt="Ảnh bìa trang chủ Studium" />
+<div class="body"><div class="num">01 — TRANG CHỦ</div>
+<h2>Giới thiệu & <em>dòng chảy</em> tư tưởng</h2>
+<p>Hero cân đối, hoạt động cộng đồng mới nhất, năm trường phái lớn và lối vào thư viện.</p>
+<div class="go">Mở trang chủ <span>→</span></div></div></a>
+<a class="page-card" href="thu-vien.html" data-od-id="launcher-card-library">
+<img src="assets/lab-1.png" alt="Thư viện nghiên cứu triết học" />
+<div class="body"><div class="num">02 — THƯ VIỆN</div>
+<h2>Nghiên cứu & <em>luận giải</em> gốc</h2>
+<p>Lọc theo trường phái, đọc tóm luận kèm trích dẫn nguyên văn và nguồn tham khảo.</p>
+<div class="go">Mở thư viện <span>→</span></div></div></a>
+<a class="page-card" href="doi-thoai.html" data-od-id="launcher-card-dialogue">
+<img src="assets/work-1.png" alt="Phòng đối thoại triết học" />
+<div class="body"><div class="num">03 — ĐỐI THOẠI</div>
+<h2>Bàn luận <em>sâu</em> có điều phối</h2>
+<p>Luồng thảo luận theo chủ đề, quy tắc tranh luận và hộp phản biện viết ngay trên trang.</p>
+<div class="go">Vào đối thoại <span>→</span></div></div></a>
+<a class="page-card" href="chuyen-de.html" data-od-id="launcher-card-essay">
+<img src="assets/testimonial.png" alt="Chuyên đề triết học dài kỳ" />
+<div class="body"><div class="num">04 — CHUYÊN ĐỀ</div>
+<h2>Đọc sâu: <em>Philia</em> là gì?</h2>
+<p>Tiểu luận dài kỳ theo Aristotle, mục lục bám dính, thanh tiến độ và chú thích học thuật.</p>
+<div class="go">Đọc chuyên đề <span>→</span></div></div></a>
+<a class="page-card" href="chuyen-de-ergon.html" data-od-id="launcher-card-ergon">
+<img src="assets/lab-3.png" alt="Chuyên đề Ergon của Aristotle" />
+<div class="body"><div class="num">05 — CHUYÊN ĐỀ</div>
+<h2>Ergon: con người <em>để làm gì?</em></h2>
+<p>Lập luận chức năng EN I.7 — hạnh phúc như một động từ, ba phản biện và lời đáp.</p>
+<div class="go">Đọc kỳ Ergon <span>→</span></div></div></a>
+<a class="page-card" href="chuyen-de-arete.html" data-od-id="launcher-card-arete">
+<img src="assets/method-2.png" alt="Chuyên đề Arete và đức hạnh" />
+<div class="body"><div class="num">06 — CHUYÊN ĐỀ</div>
+<h2>Aretē: nghệ thuật <em>thói quen</em></h2>
+<p>Hai họ đức hạnh, trung dung "đối với chúng ta", phronesis và cách thói quen nặn linh hồn.</p>
+<div class="go">Đọc kỳ Aretē <span>→</span></div></div></a>
+<a class="page-card" href="su-kien.html" data-od-id="launcher-card-events">
+<img src="assets/work-2.png" alt="Sự kiện và nhóm đọc chung" />
+<div class="body"><div class="num">07 — SỰ KIỆN</div>
+<h2>Đọc chung & <em>gặp gỡ</em> mỗi tháng</h2>
+<p>Đọc chung Suy tưởng 20.09, đối thoại Sartre 27.09, trà đàm Trang Tử 04.10 — form đăng ký 2 phút.</p>
+<div class="go">Xem lịch & đăng ký <span>→</span></div></div></a>
+<a class="page-card" href="bien-ban-suy-tuong.html" data-od-id="launcher-card-minutes">
+<img src="assets/lab-5.png" alt="Biên bản đọc chung Suy tưởng" />
+<div class="body"><div class="num">08 — BIÊN BẢN</div>
+<h2>Kỳ VII: biên bản <em>Suy tưởng</em></h2>
+<p>Ghi chép buổi 1–2 nhóm đọc chung Marcus Aurelius: luận điểm, trích dẫn và câu hỏi còn mở.</p>
+<div class="go">Đọc biên bản <span>→</span></div></div></a>
+</div>
+</main>
+<script>(function(){var k='tq-theme';function set(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(k,t)}catch(e){}document.querySelectorAll('.theme-btn').forEach(function(x){x.textContent=t==='dark'?'☀':'☾';x.setAttribute('aria-label',t==='dark'?'Chế độ sáng':'Chế độ tối')})}try{var s=localStorage.getItem(k);if(s)set(s);else if(matchMedia('(prefers-color-scheme: dark)').matches)set('dark')}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.theme-btn');if(b)set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')})})();</script>
+<script>(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.site-nav .links');if(!t||!l)return;t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?String.fromCharCode(10005):String.fromCharCode(9776);});l.addEventListener('click',function(e){if(e.target.closest('a')){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});window.addEventListener('resize',function(){if(window.innerWidth>880){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});})();</script></body>
+</html>

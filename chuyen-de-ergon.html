@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chuyên đề: Ergon — con người “để làm gì”? — Studium</title>
+<meta name="description" content="Tiểu luận dài kỳ theo Aristotle: lập luận chức năng (ergon) — hạnh phúc là hoạt động của linh hồn theo đức hạnh. Mục lục, chú thích, tiến độ đọc." />
+<link rel="stylesheet" href="atelier.css" />
+<style>
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--paper) 93%,transparent);backdrop-filter:blur(10px);border-bottom:1px dotted var(--line)}
+.site-nav .wrap{display:flex;align-items:center;gap:30px;padding-top:15px;padding-bottom:15px}
+.brand{font-family:var(--sans);font-weight:800;font-size:20px;text-decoration:none;color:inherit}.brand i{color:var(--coral);font-style:normal}
+.site-nav .links{display:flex;gap:22px;margin-left:auto;font-size:14.5px;font-weight:600}
+.site-nav .links a{text-decoration:none;color:inherit;opacity:.75}.site-nav .links a[aria-current]{opacity:1;border-bottom:2px solid var(--coral)}
+.progress{position:sticky;top:57px;z-index:40;height:3px;background:var(--line-soft)}
+.progress i{display:block;height:100%;width:0;background:var(--coral)}
+.hero{padding:64px 0 36px;border-bottom:1px dotted var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;margin-bottom:14px}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(32px,4.6vw,58px);letter-spacing:-.015em;line-height:1.12;max-width:20ch}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:500}h1 .dot{color:var(--coral)}
+.byline{display:flex;gap:16px;align-items:center;margin-top:20px;font-size:14px;color:var(--ink-mute)}
+.byline .avatar{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--bone);display:grid;place-items:center;font-weight:700}
+.hero img{width:100%;border-radius:16px;border:1px solid var(--line-soft);box-shadow:var(--shadow);margin-top:32px;aspect-ratio:21/9;object-fit:cover}
+.e-grid{display:grid;grid-template-columns:5fr 9fr 4fr;gap:44px;padding:48px 0 90px;align-items:start}
+.toc{position:sticky;top:80px;border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);padding:20px}
+.toc h2{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:12px}
+.toc a{display:block;font-size:14px;text-decoration:none;color:inherit;padding:7px 0;border-bottom:1px dotted var(--line-soft)}
+.toc a.active{color:var(--coral);font-weight:700}
+.essay{font-size:18px;line-height:1.85;letter-spacing:0;color:var(--ink-soft);max-width:65ch}
+.essay h2{font-family:var(--sans);font-size:27px;font-weight:700;letter-spacing:-.01em;line-height:1.2;margin:44px 0 14px;color:var(--ink);scroll-margin-top:110px}
+.essay h2 em{font-family:var(--serif);font-style:italic;font-weight:500}
+.essay h2 .rn{font-family:var(--mono);font-size:13px;color:var(--coral);display:block;letter-spacing:.16em;margin-bottom:8px}
+.essay p{margin-bottom:18px;line-height:1.85;letter-spacing:0}
+.essay blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:20px;line-height:1.7;letter-spacing:0;border-left:3px solid var(--coral);padding:6px 0 6px 20px;margin:28px 0;color:var(--ink)}
+.essay figure{margin:30px 0}
+.essay figure img{width:100%;border-radius:12px;border:1px solid var(--line-soft);aspect-ratio:16/9;object-fit:cover}
+.essay figcaption{font-family:var(--mono);font-size:13px;line-height:1.6;color:var(--ink-faint);margin-top:8px}
+.fn{font-size:13px;line-height:1.4;color:var(--coral);vertical-align:super;text-decoration:none;font-weight:700}
+.notes{border-top:1px dotted var(--line);margin-top:40px;padding-top:20px;font-size:14px;line-height:1.7;color:var(--ink-mute)}
+.notes li{margin-bottom:10px;margin-left:20px}
+.margin{display:flex;flex-direction:column;gap:16px;position:sticky;top:80px}
+.mnote{border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);padding:18px;font-size:14px;line-height:1.6}
+.mnote h3{font-size:14px;margin-bottom:6px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--olive)}
+.mnote p{color:var(--ink-mute);font-size:13.5px;line-height:1.65}
+.mnote img{width:100%;border-radius:8px;aspect-ratio:1/1;object-fit:cover;margin-top:10px}
+.next{border:1px solid var(--line-soft);border-radius:12px;background:var(--ink);color:var(--bone);padding:24px;text-decoration:none;display:block}
+.next small{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--coral-soft)}
+.next b{display:block;font-size:19px;margin-top:8px}
+@media(max-width:1000px){.e-grid{grid-template-columns:1fr 2fr}.margin{display:none}}
+@media(max-width:880px){.e-grid{grid-template-columns:1fr}.toc{position:static}.site-nav .links{display:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Điều hướng chính"><div class="wrap">
+<a class="brand" href="trang-chu.html">Studium<i>.</i></a>
+<div class="links"><a href="trang-chu.html">Trang chủ</a><a href="thu-vien.html">Thư viện</a><a href="doi-thoai.html">Đối thoại</a><a href="chuyen-de.html" aria-current="page">Chuyên đề</a><a href="su-kien.html">Sự kiện</a></div><button class="theme-btn" type="button" aria-label="Bật chế độ tối" title="Tối / sáng">☾</button><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button></div></nav>
+<div class="progress" aria-hidden="true"><i id="bar"></i></div>
+<main class="wrap">
+<header class="hero" data-od-id="essay-hero">
+<div class="eyebrow">Kỳ II · Chuyên đề dài kỳ · Aristotle — Luân lý học Nicomachean I.7</div>
+<h1>Ergon: con người sinh ra <em>“để làm gì”</em><span class="dot">?</span></h1>
+<div class="byline"><div class="avatar">TQ</div><div><b>Ban biên tập Studium</b> · dịch &amp; luận giải · 16 phút đọc · Dựa trên EN I.7, X.7–8</div></div>
+<img src="assets/lab-3.png" alt="Minh họa lập luận chức năng của Aristotle" />
+</header>
+<nav class="series" aria-label="Loạt chuyên đề" data-od-id="essay-series"><a href="chuyen-de.html">Kỳ I · Philia</a><span>Kỳ II · <b>Ergon</b></span><a href="chuyen-de-arete.html">Kỳ III · Aretē</a></nav>
+<div class="e-grid">
+<nav class="toc" aria-label="Mục lục chuyên đề" data-od-id="essay-toc">
+<h2>Mục lục</h2>
+<a href="#m1">1 · Ergon: chức năng của một thứ</a>
+<a href="#m2">2 · Lập luận chức năng</a>
+<a href="#m3">3 · Hạnh phúc là một động từ</a>
+<a href="#m4">4 · Ba phản biện — và lời đáp</a>
+<a href="#m5">5 · Tìm ergon của chính mình</a>
+<a href="#notes">Chú thích &amp; nguồn đọc</a>
+</nav>
+<article class="essay" data-od-id="essay-body">
+<h2 id="m1"><span class="rn">I · KHÁI NIỆM</span>Ergon: <em>chức năng</em> của một thứ</h2>
+<p>Trong tiếng Hy Lạp, <i>ergon</i> (ἔργον) là công việc, chức năng, nhiệm vụ — cái mà một thứ <b>sinh ra để làm</b>. Con dao có ergon là cắt; con mắt có ergon là nhìn; người thổi sáo có ergon là thổi sáo hay. Và câu hỏi của Aristotle: <b>vậy con người thì sao?</b><a class="fn" href="#notes">[1]</a></p>
+<blockquote>“Cái tốt của mỗi thứ nằm ở việc thực hiện tốt chức năng của nó.” — EN I.7</blockquote>
+<p>Câu hỏi nghe có vẻ kỳ quặc với tai hiện đại — như thể con người là một dụng cụ. Nhưng Aristotle không hỏi “vũ trụ giao cho ta nhiệm vụ gì”. Ông hỏi điều khiêm tốn hơn: <b>đâu là hoạt động đặc trưng</b> khiến một đời người được gọi là sống tốt?</p>
+<h2 id="m2"><span class="rn">II · LẬP LUẬN</span>Lập luận <em>chức năng</em></h2>
+<p>Lập luận đi theo từng bậc, loại trừ dần. Đời sống dinh dưỡng và sinh trưởng — ta chia sẻ với thực vật. Đời sống cảm giác — ta chia sẻ với động vật. Còn lại điều chỉ con người có: <b>hoạt động của linh hồn theo lý trí</b> (<i>energeia psychēs kata logon</i>).<a class="fn" href="#notes">[2]</a></p>
+<figure><img src="assets/method-2.png" alt="Các bậc của lập luận chức năng" /><figcaption>Từ thực vật đến động vật đến con người: mỗi bậc giữ lại phần đặc trưng của mình.</figcaption></figure>
+<p>Chú ý chữ <i>hoạt động</i> (energeia): ergon của con người không phải một trạng thái sở hữu — không phải “có lý trí” rồi cất vào tủ — mà là <b>dùng</b> lý trí, như mắt tốt không phải mắt đẹp mà là mắt <i>nhìn rõ</i>.</p>
+<h2 id="m3"><span class="rn">III · LUẬN ĐỀ</span>Hạnh phúc là một <em>động từ</em></h2>
+<p>Từ đó Aristotle rút ra định nghĩa nổi tiếng nhất của đạo đức học phương Tây: <b>eudaimonia là hoạt động của linh hồn theo đức hạnh hoàn hảo, trong một đời trọn vẹn</b> (<i>bios teleios</i>).<a class="fn" href="#notes">[3]</a></p>
+<blockquote>“Một con én không làm nên mùa xuân, một ngày đẹp không làm nên hạnh phúc.” — EN I.7</blockquote>
+<p>Ba hệ quả lớn. Một, hạnh phúc không phải cảm giác mà là <b>cách sống</b>. Hai, nó cần thời gian — không ai gọi một đứa trẻ là “đã hạnh phúc viên mãn”. Ba, đức hạnh (aretē) bước vào ngay trong định nghĩa: sống đúng chức năng nghĩa là sống <i>xuất sắc</i> theo chức năng ấy — và đó là chủ đề của <a href="chuyen-de-arete.html">kỳ III</a>.</p>
+<h2 id="m4"><span class="rn">IV · TRANH BIỆN</span>Ba phản biện — <em>và lời đáp</em></h2>
+<p><b>(1) Con người có đúng một chức năng sao?</b> Ta vừa làm cha mẹ, vừa làm thợ, vừa làm công dân. Đáp: ergon ở đây không phải một nghề mà là <b>năng lực phân biệt</b> — logos — thứ thấm vào mọi vai trò: làm cha <i>có suy xét</i>, làm thợ <i>có suy xét</i>.</p>
+<figure><img src="assets/work-2.png" alt="Logos thấm vào mọi vai trò của đời người" /><figcaption>Ergon không phải một nghề — mà là cách logos thấm vào mọi nghề.</figcaption></figure>
+<p><b>(2) Người mất khả năng lý trí thì sao — còn phẩm giá không?</b> Đây là phản biện sắc nhất. Aristotle phân biệt: ergon mô tả <b>đặc trưng của loài</b>, không phải điều kiện của phẩm giá từng cá nhân. Như định nghĩa “con người là động vật có lý trí” không tước nhân tính của người đang ngủ.<a class="fn" href="#notes">[4]</a></p>
+<p><b>(3) Từ “là” nhảy sang “phải” — ngụy biện tự nhiên?</b> Hume sẽ hỏi: từ chỗ con người <i>có</i> lý trí, sao suy ra ta <i>phải</i> sống theo lý trí? Đáp của Aristotle: ergon không mô tả thống kê mà mô tả <b>bản chất hoàn thiện</b> — như “dao tốt <i>phải</i> sắc” không phải ngụy biện mà là ngữ pháp của sự xuất sắc.</p>
+<h2 id="m5"><span class="rn">V · THỰC HÀNH</span>Tìm <em>ergon</em> của chính mình</h2>
+<p>Ba bài tập Aristotle để lại, diễn đạt cho đời hiện đại: <b>(1) Nhật ký logos</b> — mỗi tối ghi một việc hôm nay mình đã dùng lý trí tốt nhất và một việc đã hành động theo quán tính. <b>(2) Câu hỏi người thợ</b> — việc gì mà nếu thiếu mình, tập thể sẽ mất đi một cách làm <i>chỉ mình</i> làm được? <b>(3) Craftsmanship thường nhật</b> — chọn một việc nhỏ (nấu ăn, viết email, quét nhà) và làm nó xuất sắc như thể đó là ergon của cả đời mình.</p>
+<blockquote>“Ta là những gì ta lặp đi lặp lại. Sự xuất sắc không phải hành động, mà là thói quen.”</blockquote>
+<ol class="notes" id="notes">
+<li>[1] Aristotle, <i>Nicomachean Ethics</i> I.7, 1097b22–1098a20 — toàn bộ lập luận ergon.</li>
+<li>[2] EN I.7, 1097b33–1098a7: loại trừ đời sống dinh dưỡng (threptikon) và cảm giác (aisthētikon).</li>
+<li>[3] EN I.7, 1098a16–18: định nghĩa eudaimonia; <i>bios teleios</i> — đời trọn vẹn.</li>
+<li>[4] Xem thêm EN X.7–8 về đời chiêm nghiệm (theōria) như ergon cao nhất; và Martha Nussbaum, <i>The Fragility of Goodness</i> (1986) về giới hạn của lập luận.</li>
+<li>Bản đọc thêm: Plato, <i>Cộng Hòa</i> I (lập luận ergon của Socrates); R. Kraut, <i>Aristotle on the Human Good</i> (1989).</li>
+</ol>
+</article>
+<aside class="margin">
+<div class="mnote" data-od-id="essay-glossary"><h3>Từ khóa Hy Lạp</h3><p><b>ergon</b> (ἔργον) — chức năng · <b>energeia</b> (ἐνέργεια) — hoạt động · <b>bios teleios</b> (βίος τέλειος) — đời trọn vẹn · <b>logos</b> (λόγος) — lý trí, lời nói.</p><img src="assets/cta.png" alt="Từ khóa triết học Hy Lạp" /></div>
+<div class="mnote"><h3>Câu hỏi đối thoại</h3><p>“Việc gì trong ngày của bạn chỉ có thể làm tốt <i>bằng lý trí</i> — và bạn đã làm nó ra sao?” — mang câu này sang phòng đối thoại.</p></div>
+<a class="next" href="chuyen-de-arete.html"><small>KỲ TIẾP THEO →</small><b>Aretē: đức hạnh không phải là trung bình</b></a>
+</aside>
+</div>
+</main>
+<script>
+var bar=document.getElementById('bar');
+addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight);bar.style.width=(p*100)+'%'},{passive:true});
+var links=document.querySelectorAll('.toc a'),secs=[];
+links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)secs.push([a,s])});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('active')});var f=secs.find(function(x){return x[1]===e.target});if(f)f[0].classList.add('active')}})},{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(function(x){io.observe(x[1])});
+</script>
+<script>(function(){var k='tq-theme';function set(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(k,t)}catch(e){}document.querySelectorAll('.theme-btn').forEach(function(x){x.textContent=t==='dark'?'☀':'☾';x.setAttribute('aria-label',t==='dark'?'Chế độ sáng':'Chế độ tối')})}try{var s=localStorage.getItem(k);if(s)set(s);else if(matchMedia('(prefers-color-scheme: dark)').matches)set('dark')}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.theme-btn');if(b)set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')})})();</script>
+<script>(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.site-nav .links');if(!t||!l)return;t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?String.fromCharCode(10005):String.fromCharCode(9776);});l.addEventListener('click',function(e){if(e.target.closest('a')){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});window.addEventListener('resize',function(){if(window.innerWidth>880){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});})();</script></body>
+</html>

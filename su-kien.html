@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sự kiện &amp; đọc chung — Studium</title>
+<meta name="description" content="Lịch sự kiện triết học: đọc chung, đối thoại mở, trà đàm. Đăng ký nhóm đọc chung Suy tưởng của Marcus Aurelius." />
+<link rel="stylesheet" href="atelier.css" />
+<style>
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--paper) 93%,transparent);backdrop-filter:blur(10px);border-bottom:1px dotted var(--line)}
+.site-nav .wrap{display:flex;align-items:center;gap:30px;padding-top:15px;padding-bottom:15px}
+.brand{font-family:var(--sans);font-weight:800;font-size:20px;text-decoration:none;color:inherit}.brand i{color:var(--coral);font-style:normal}
+.site-nav .links{display:flex;gap:22px;margin-left:auto;font-size:14.5px;font-weight:600}
+.site-nav .links a{text-decoration:none;color:inherit;opacity:.75}.site-nav .links a[aria-current]{opacity:1;border-bottom:2px solid var(--coral)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;margin-bottom:14px}
+.hero{padding:40px 0 32px;border-bottom:1px dotted var(--line);min-height:0}
+.hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center}
+.hero-img{border-radius:16px;overflow:hidden;border:1px solid var(--line-soft);box-shadow:var(--shadow);position:relative}
+.hero-img img{width:100%;height:auto;display:block;aspect-ratio:4/3;max-height:380px;object-fit:cover}
+.hero-foot{display:flex;gap:10px 26px;flex-wrap:wrap;margin-top:20px;padding-top:14px;border-top:1px dotted var(--line);font-size:13.5px;color:var(--ink-mute)}
+.hero-foot b{color:var(--ink)} .hero-foot i{color:var(--coral);font-style:normal;margin-right:7px}
+#lich{padding-top:28px}
+.next-card{position:absolute;left:16px;right:16px;bottom:16px;background:color-mix(in oklch,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border:1px solid var(--line-soft);border-radius:12px;padding:14px 16px;font-size:13.5px;box-shadow:var(--shadow)}
+.next-card b{display:block;font-size:15.5px;line-height:1.4;margin:4px 0 2px}
+.next-card time{font-family:var(--mono);font-size:11.5px;line-height:1.5;letter-spacing:.08em;color:var(--coral)}
+.next-card a{font-weight:700;font-size:13px;color:var(--coral);text-decoration:none}
+.hero-cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:26px;margin-top:22px;padding-top:16px;border-top:1px dotted var(--line)}
+.hero-meta b{font-family:var(--sans);font-size:24px;display:block}
+.hero-meta span{font-size:13px;color:var(--ink-mute)}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(32px,4.6vw,58px);letter-spacing:-.02em;line-height:1.15;max-width:20ch}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:500}h1 .dot{color:var(--coral)}
+.lead{color:var(--ink-mute);font-size:17px;line-height:1.65;max-width:62ch;margin-top:16px}
+section.block{padding:40px 0;border-bottom:1px dotted var(--line)}
+h2.sec-t{font-family:var(--sans);font-weight:780;font-size:clamp(26px,3vw,38px);letter-spacing:-.015em;line-height:1.2;margin-bottom:10px}
+h2.sec-t em{font-family:var(--serif);font-style:italic;font-weight:500}h2.sec-t .dot{color:var(--coral)}
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.ev{border:1px solid var(--line-soft);border-radius:14px;background:var(--bone);padding:20px;display:flex;flex-direction:column;gap:8px}
+.ev time{font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.02em;color:var(--coral)}
+.ev h3{font-size:20px;line-height:1.2;letter-spacing:-.01em}
+.ev ul{list-style:none;font-size:14px;line-height:1.6;color:var(--ink-mute);display:flex;flex-direction:column;gap:5px}
+.ev ul b{color:var(--ink)}
+.ev p{font-size:15.5px;line-height:1.65;color:var(--ink-mute)}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;font-size:14.5px;text-decoration:none;border:1px solid var(--ink);cursor:pointer;background:transparent;color:inherit}
+.btn.primary{background:var(--ink);color:var(--bone)}
+.btn.ghost{background:transparent}
+.ev .btn{margin-top:auto;align-self:flex-start}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.split img{width:100%;border-radius:14px;border:1px solid var(--line-soft);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover}
+.sched{margin-top:14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);overflow:hidden}
+.sched div{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:13px 18px;border-bottom:1px dotted var(--line-soft);font-size:15px;line-height:1.6}
+.sched div:last-child{border-bottom:0}
+.sched b{font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.02em;color:var(--coral);white-space:nowrap}
+.rules{margin:12px 0 0 20px;font-size:15.5px;line-height:1.65;color:var(--ink-mute);display:flex;flex-direction:column;gap:6px}
+form.reg{margin-top:20px;border:1px solid var(--line-soft);border-radius:14px;background:var(--bone);padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.reg .full{grid-column:1/-1}
+label.fl{display:flex;flex-direction:column;gap:7px;font-size:13.5px;font-weight:700}
+label.fl span{font-weight:400;color:var(--ink-mute);font-size:13px}
+input[type=text],input[type=email],input[type=tel],select,textarea{padding:12px 16px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:inherit;font-size:15px;font-family:inherit;width:100%}
+textarea{min-height:96px;resize:vertical}
+.radios{display:flex;gap:16px;font-size:14.5px;font-weight:400}
+.checks{display:flex;flex-direction:column;gap:10px;font-size:14px;font-weight:400}
+.checks label,.radios label{display:flex;gap:9px;align-items:flex-start;cursor:pointer}
+input[type=checkbox],input[type=radio]{width:18px;height:18px;accent-color:var(--coral);flex:none;margin-top:2px}
+.perr{color:var(--coral);font-size:13px;font-weight:600;min-height:18px}
+.okcard{display:none;margin-top:20px;border:1px solid var(--line-soft);border-radius:14px;background:var(--ink);color:var(--bone);padding:28px}
+.okcard small{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--coral-soft)}
+.okcard h3{font-size:24px;line-height:1.2;letter-spacing:-.01em;margin:10px 0}
+.okcard p{font-size:15.5px;line-height:1.65;opacity:.85}
+.okcard .code{font-family:var(--mono);font-size:15px;border:1px dashed var(--coral-soft);border-radius:8px;padding:8px 14px;display:inline-block;margin-top:12px}
+.arch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.arch div{border-top:3px solid var(--line);padding-top:14px;font-size:14.5px;line-height:1.6;color:var(--ink-mute)}
+.arch time{font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.02em;color:var(--ink-faint)}
+.arch b{display:block;color:var(--ink);font-size:16px;line-height:1.4;margin:6px 0}
+footer{padding:40px 0 32px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.foot-grid h4{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:12px}
+.foot-grid a{display:block;font-size:14.5px;text-decoration:none;color:inherit;padding:4px 0;opacity:.8}
+.mega{font-family:var(--serif);font-style:italic;font-size:clamp(48px,8vw,110px);line-height:1;margin-top:28px;opacity:.9}
+[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+[data-reveal].in{opacity:1;transform:none}
+@media(max-width:880px){.hero-grid,.ev-grid,.arch,.split{grid-template-columns:1fr}form.reg{grid-template-columns:1fr}#row-top{grid-template-columns:1fr!important}.site-nav .wrap{gap:14px}.site-nav .links{display:flex;margin-left:auto;gap:0}.site-nav .links a{display:none}.theme-btn{margin-left:auto;min-width:44px;min-height:44px}section.block{padding:32px 0}.hero{padding:28px 0 24px}.hero-img img{aspect-ratio:16/10;max-height:none}.next-card{left:12px;right:12px;bottom:12px;padding:12px 14px}.hero-meta{flex-wrap:wrap;gap:12px 20px}.hero-cta .btn{flex:1 1 100%;text-align:center;padding:14px 20px}.ev .btn{width:100%;text-align:center;align-self:stretch}.sched div{grid-template-columns:78px 1fr;padding:12px 14px}.foot-grid{grid-template-columns:1fr 1fr;gap:22px}.mega{font-size:clamp(44px,15vw,64px)}}
+@media(max-width:560px){.wrap{padding:0 18px}h1{font-size:clamp(30px,9vw,38px)}.lead{font-size:16px}.hero-foot{font-size:13px}.foot-grid{grid-template-columns:1fr;gap:18px}form.reg{padding:18px}.okcard{padding:22px 18px}}
+@media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Điều hướng chính"><div class="wrap">
+<a class="brand" href="trang-chu.html">Studium<i>.</i></a>
+<div class="links"><a href="trang-chu.html">Trang chủ</a><a href="thu-vien.html">Thư viện</a><a href="doi-thoai.html">Đối thoại</a><a href="chuyen-de.html">Chuyên đề</a><a href="su-kien.html" aria-current="page">Sự kiện</a></div><button class="theme-btn" type="button" aria-label="Bật chế độ tối" title="Tối / sáng">☾</button><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button></div></nav>
+<main class="wrap">
+<header class="hero" data-od-id="events-hero">
+<div class="hero-grid">
+<div data-reveal>
+<div class="eyebrow">Lịch cộng đồng · Hà Nội — Sài Gòn — Trực tuyến</div>
+<h1>Gặp nhau <em>ngoài trang giấy</em><span class="dot">.</span></h1>
+<p class="lead">Đọc chung mỗi tháng một tác phẩm, đối thoại mở mỗi quý một câu hỏi lớn, trà đàm mỗi mùa một giấc mộng. Không cần bằng cấp triết học — chỉ cần đọc trước và đến đúng giờ.</p>
+<div class="hero-cta"><a class="btn primary" href="#dk" data-od-id="events-hero-register">Đăng ký đọc chung</a><a class="btn ghost" href="#lich" data-od-id="events-hero-schedule">Xem lịch tháng này</a></div>
+<div class="hero-meta"><div><b>03</b><span>sự kiện tháng này</span></div><div><b>04</b><span>buổi đọc chung Suy tưởng</span></div><div><b>20.09</b><span>sự kiện gần nhất · Hà Nội</span></div></div>
+</div>
+<figure class="hero-img" data-reveal data-od-id="events-hero-image"><img src="assets/cta.png" alt="Tượng đá nảy mầm ô-liu — biểu tượng gặp gỡ Studium" /><figcaption class="next-card"><time>SẮP NHẤT · 20.09 · HÀ NỘI</time><b>Đọc chung: Suy tưởng, quyển IV–V</b><span>19h00 · 24/30 chỗ — </span><a href="#dk">giữ chỗ →</a></figcaption></figure>
+</div>
+<div class="hero-foot" data-reveal><span><i>◆</i><b>20.09 · Hà Nội</b> — 24/30 chỗ, giữ chỗ trước 1 ngày</span><span><i>◆</i>Đọc trước ~20 trang là đủ — không cần bằng cấp</span><span><i>◆</i>Hà Nội · Sài Gòn · Trực tuyến</span></div>
+</header>
+<section class="block" id="lich" data-reveal data-od-id="events-upcoming">
+<div class="eyebrow">Sắp diễn ra · 3 sự kiện</div>
+<h2 class="sec-t">Tháng này có gì<span class="dot">.</span></h2>
+<div class="ev-grid">
+<article class="ev"><time>20.09 · THỨ BẢY · HÀ NỘI</time><h3>Đọc chung: Suy tưởng của Marcus Aurelius</h3><ul><li><b>19h00–21h00</b> · Không gian Trà Thảnh Thơi, Hoàn Kiếm</li><li>Điều phối: nhóm Khắc kỷ · <b>24/30 chỗ</b></li><li>Phí: 50.000đ (tiền trà nước)</li></ul><p>Đọc chậm quyển IV–V. Mang theo một câu trích dẫn tâm đắc và một câu hỏi chưa trả lời được.</p><button class="btn primary" data-ev="doc-chung-suy-tuong" type="button">Đăng ký sự kiện này</button></article>
+<article class="ev"><time>27.09 · THỨ BẢY · TRỰC TUYẾN</time><h3>Đối thoại mở: Tự do theo Sartre có đáng sợ?</h3><ul><li><b>20h00–21h30</b> · Phòng trực tuyến (link gửi qua email)</li><li>Điều phối: Minh An · <b>87/100 chỗ</b></li><li>Phí: miễn phí</li></ul><p>90 phút tranh biện có điều phối, trích dẫn bắt buộc từ <i>Thuyết hiện sinh là một thuyết nhân bản</i>. Biên bản tóm tắt gửi sau buổi.</p><button class="btn primary" data-ev="doi-thoai-sartre" type="button">Đăng ký sự kiện này</button></article>
+<article class="ev"><time>04.10 · CHỦ NHẬT · SÀI GÒN</time><h3>Trà đàm: Trang Tử và giấc mộng hồ điệp</h3><ul><li><b>15h00–17h00</b> · Hiên trà Quán Cũ, Quận 3</li><li>Điều phối: Trang Hạ · <b>15/20 chỗ</b></li><li>Phí: 80.000đ (trà + bánh)</li></ul><p>Buổi chiều trà — đọc <i>Tiêu Dao Du</i>, bàn về ranh giới mộng và tỉnh, và cái cười của Trang Tử.</p><button class="btn primary" data-ev="tra-dam-trang-tu" type="button">Đăng ký sự kiện này</button></article>
+</div>
+</section>
+<section class="block"><div class="split">
+<div data-reveal data-od-id="reading-group">
+<div class="eyebrow">Nhóm đọc chung · Kỳ 07</div>
+<h2 class="sec-t">Một tháng, một tác phẩm, <em>bốn buổi tối</em><span class="dot">.</span></h2>
+<p class="lead">Tháng này: <b><i>Suy tưởng (Meditations)</i> của Marcus Aurelius</b> — quyển IV–VII. Mỗi buổi 2 giờ: 40 phút đọc to, 60 phút đối thoại, 20 phút viết lại một châm ngôn cho chính mình.</p>
+<div class="sched">
+<div><b>BUỔI 1 · 20.09</b><span>Quyển IV — cái nhìn từ trên cao: vũ trụ và cát bụi</span></div>
+<div><b>BUỔI 2 · 27.09</b><span>Quyển V — việc của buổi sáng: thức dậy và làm phận sự</span></div>
+<div><b>BUỔI 3 · 04.10</b><span>Quyển VI — phân biệt điều ta kiểm soát được</span></div>
+<div><b>BUỔI 4 · 11.10</b><span>Quyển VII — viết châm ngôn của chính mình &amp; tổng kết</span></div>
+</div>
+<ul class="rules"><li>Đọc trước khoảng 20 trang mỗi buổi — bản dịch nào cũng được, ghi số trang.</li><li>Mang theo một trích dẫn tâm đắc và một chỗ chưa hiểu.</li><li>Nguyên tắc từ thiện: diễn đạt lại ý người khác trước khi phản biện.</li><li>Vắng quá 2 buổi nhường chỗ cho danh sách chờ.</li></ul>
+</div>
+<div data-reveal><img src="assets/about.png" alt="Không gian đọc chung Studium" /><p style="margin-top:12px;font-size:14px;color:var(--ink-mute)">Kỳ 06 — đọc <i>Tiêu Dao Du</i> của Trang Tử, buổi trà đàm cuối kỳ tại Sài Gòn.</p></div>
+</div></section>
+<section class="block" data-reveal data-od-id="register-form">
+<div class="eyebrow">Form đăng ký · Phản hồi trong 24 giờ</div>
+<h2 class="sec-t">Đăng ký đọc chung<span class="dot">.</span></h2>
+<p class="lead">Điền form dưới đây — ban điều phối xác nhận chỗ qua email. Không thu phí trước, không spam.</p>
+<form class="reg" id="dk" novalidate>
+<div class="full" style="display:grid;grid-template-columns:1fr 1fr;gap:18px" id="row-top">
+<label class="fl">Họ và tên *<input type="text" name="hoten" autocomplete="name" placeholder="Nguyễn Văn An" /><span class="perr" data-e="hoten"></span></label>
+<label class="fl">Email *<input type="email" name="email" autocomplete="email" placeholder="ban@email.com" /><span class="perr" data-e="email"></span></label>
+</div>
+<label class="fl">Số điện thoại<span>Chỉ dùng khi đổi lịch đột xuất</span><input type="tel" name="sdt" autocomplete="tel" placeholder="09xx xxx xxx" /></label>
+<label class="fl">Chọn sự kiện *<select name="sukien"><option value="ca-nhom">Cả nhóm đọc chung 4 buổi — Suy tưởng (20.09–11.10)</option><option value="doc-chung-suy-tuong">20.09 · Đọc chung: Suy tưởng (Hà Nội)</option><option value="doi-thoai-sartre">27.09 · Đối thoại mở: Sartre (Trực tuyến)</option><option value="tra-dam-trang-tu">04.10 · Trà đàm Trang Tử (Sài Gòn)</option></select></label>
+<div class="full"><label class="fl">Hình thức tham gia<span>Buổi trực tiếp vẫn có link dự phòng trực tuyến</span></label><div class="radios" style="margin-top:8px"><label><input type="radio" name="hinhthuc" value="truc-tiep" checked /> Trực tiếp</label><label><input type="radio" name="hinhthuc" value="truc-tuyen" /> Trực tuyến</label></div></div>
+<label class="fl full">Câu trích dẫn tâm đắc<span>Một câu triết học bạn mang theo — dùng làm thẻ tên trong buổi đầu</span><textarea name="trichdan" placeholder="“Hạnh phúc của đời người tùy thuộc vào phẩm chất của tư tưởng.” — Marcus Aurelius"></textarea></label>
+<div class="checks full"><label><input type="checkbox" name="quytac" /> Tôi đã đọc thể lệ: đọc trước mỗi buổi, diễn đạt lại ý người khác trước khi phản biện, vắng quá 2 buổi nhường chỗ. *</label><label><input type="checkbox" name="thutuan" checked /> Nhận thư tuần Studium (một trích dẫn + một luận giải + một câu hỏi, sáng Chủ nhật).</label><p class="perr" data-e="quytac"></p></div>
+<div class="full" style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn primary" type="submit">Gửi đăng ký</button><button class="btn ghost" type="reset">Nhập lại</button></div>
+</form>
+<div class="okcard" id="dk-ok" role="status"><small>ĐĂNG KÝ THÀNH CÔNG</small><h3 id="ok-title">Hẹn gặp bạn ở buổi đọc chung.</h3><p id="ok-sum"></p><span class="code" id="ok-code"></span><p style="margin-top:14px"><button class="btn ghost" id="dk-more" type="button" style="border-color:var(--bone);color:var(--bone)">Đăng ký thêm người khác</button></p></div>
+</section>
+<section class="block" data-reveal data-od-id="events-archive">
+<div class="eyebrow">Lưu trữ · 2026</div>
+<h2 class="sec-t">Đã diễn ra<span class="dot">.</span></h2>
+<div class="arch">
+<div><time>08.2026 · HÀ NỘI</time><b>Đọc chung: Tiêu Dao Du của Trang Tử</b>28 người · 4 buổi · biên bản &amp; châm ngôn đã lưu trong thư viện.</div>
+<div><time>07.2026 · TRỰC TUYẾN</time><b>Đối thoại: Camus có thực sự hạnh phúc với Sisyphus?</b>64 người · 31 phản biện · xem tóm tắt ở phòng đối thoại.</div>
+<div><time>06.2026 · SÀI GÒN</time><b>Trà đàm: Seneca và nghệ thuật của thời gian</b>18 người · đọc <i>Những bức thư gửi Lucilius</i>.</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">
+<div class="foot-grid">
+<div><h4>Studium</h4><p style="font-size:14.5px;color:var(--ink-mute);max-width:34ch">Thư viện &amp; đối thoại triết học Đông — Tây. Đọc chậm, nghĩ sâu, sống triết. <em>Ex libris Hermes.</em></p></div>
+<div><h4>Khám phá</h4><a href="thu-vien.html">Thư viện</a><a href="doi-thoai.html">Đối thoại</a><a href="chuyen-de.html">Chuyên đề</a></div>
+<div><h4>Trường phái</h4><a href="thu-vien.html#khac-ky">Khắc kỷ</a><a href="thu-vien.html#hien-sinh">Hiện sinh</a><a href="thu-vien.html#lao-trang">Lão Trang</a></div>
+<div><h4>Cộng đồng</h4><a href="su-kien.html">Sự kiện</a><a href="doi-thoai.html">Quy tắc tranh luận</a><a href="index.html">Mục lục dự án</a></div>
+</div>
+<div class="mega">minh triết.</div>
+</div><p style="font-size:13.5px;color:var(--ink-mute)">Fanpage: <a href="https://www.facebook.com/studium.exlibrishermes" target="_blank" rel="noopener">facebook.com/studium.exlibrishermes</a></p></footer>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+var sel=document.querySelector('select[name=sukien]');
+document.querySelectorAll('[data-ev]').forEach(function(b){b.addEventListener('click',function(){sel.value=b.getAttribute('data-ev');document.getElementById('dk').scrollIntoView({behavior:'smooth',block:'start'});sel.focus({preventScroll:true})})});
+try{var q=new URLSearchParams(location.search).get('ev');if(q&&sel.querySelector('option[value="'+q+'"]'))sel.value=q}catch(e){}
+var NAMES={'ca-nhom':'Cả nhóm đọc chung 4 buổi — Suy tưởng','doc-chung-suy-tuong':'20.09 · Đọc chung: Suy tưởng (Hà Nội)','doi-thoai-sartre':'27.09 · Đối thoại mở: Sartre (Trực tuyến)','tra-dam-trang-tu':'04.10 · Trà đàm Trang Tử (Sài Gòn)'};
+document.getElementById('dk').addEventListener('submit',function(ev){
+ev.preventDefault();var f=ev.target,ok=true;
+function err(n,m){var s=f.querySelector('[data-e="'+n+'"]');if(s)s.textContent=m||''}
+var name=f.hoten.value.trim(),em=f.email.value.trim();
+err('hoten',name.length<2?'Vui lòng nhập họ tên.':'');if(name.length<2)ok=false;
+var emok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em);err('email',emok?'':'Email chưa đúng định dạng.');if(!emok)ok=false;
+err('quytac',f.quytac.checked?'':'Bạn cần đồng ý thể lệ đọc chung để giữ chỗ.');if(!f.quytac.checked)ok=false;
+if(!ok)return;
+var code='TQ-'+new Date().getFullYear()+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
+try{var all=JSON.parse(localStorage.getItem('tq-dk')||'[]');all.push({hoten:name,email:em,sdt:f.sdt.value.trim(),sukien:f.sukien.value,hinhthuc:f.hinhthuc.value,trichdan:f.trichdan.value.trim(),thutuan:f.thutuan.checked,code:code,at:new Date().toISOString()});localStorage.setItem('tq-dk',JSON.stringify(all))}catch(e){}
+document.getElementById('ok-title').textContent='Hẹn gặp bạn, '+name.split(' ').slice(-1)+' — '+(NAMES[f.sukien.value]||'sự kiện')+'.';
+document.getElementById('ok-sum').textContent='Xác nhận đã gửi về '+em+' ('+(f.hinhthuc.value==='truc-tuyen'?'trực tuyến':'trực tiếp')+'). Có mặt trước 15 phút, mang theo một trích dẫn tâm đắc.';
+document.getElementById('ok-code').textContent='Mã đăng ký: '+code;
+f.style.display='none';var box=document.getElementById('dk-ok');box.style.display='block';box.scrollIntoView({behavior:'smooth',block:'center'});
+});
+document.getElementById('dk-more').addEventListener('click',function(){var f=document.getElementById('dk');f.reset();f.style.display='grid';document.getElementById('dk-ok').style.display='none';f.scrollIntoView({behavior:'smooth',block:'start'})});
+</script>
+<script>(function(){var k='tq-theme';function set(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(k,t)}catch(e){}document.querySelectorAll('.theme-btn').forEach(function(x){x.textContent=t==='dark'?'☀':'☾';x.setAttribute('aria-label',t==='dark'?'Chế độ sáng':'Chế độ tối')})}try{var s=localStorage.getItem(k);if(s)set(s);else if(matchMedia('(prefers-color-scheme: dark)').matches)set('dark')}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.theme-btn');if(b)set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')})})();</script>
+<script>(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.site-nav .links');if(!t||!l)return;t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?String.fromCharCode(10005):String.fromCharCode(9776);});l.addEventListener('click',function(e){if(e.target.closest('a')){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});window.addEventListener('resize',function(){if(window.innerWidth>880){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});})();</script></body>
+</html>

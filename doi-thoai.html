@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Đối thoại — Studium</title>
+<meta name="description" content="Phòng đối thoại triết học: tranh luận có điều phối, trích dẫn bắt buộc, nguyên tắc từ thiện." />
+<link rel="stylesheet" href="atelier.css" />
+<style>
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--paper) 93%,transparent);backdrop-filter:blur(10px);border-bottom:1px dotted var(--line)}
+.site-nav .wrap{display:flex;align-items:center;gap:30px;padding-top:15px;padding-bottom:15px}
+.brand{font-family:var(--sans);font-weight:800;font-size:20px;text-decoration:none;color:inherit}.brand i{color:var(--coral);font-style:normal}
+.site-nav .links{display:flex;gap:22px;margin-left:auto;font-size:14.5px;font-weight:600}
+.site-nav .links a{text-decoration:none;color:inherit;opacity:.75}.site-nav .links a[aria-current]{opacity:1;border-bottom:2px solid var(--coral)}
+.page-head{padding:64px 0 26px;border-bottom:1px dotted var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;margin-bottom:14px}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(32px,4.4vw,54px);letter-spacing:-.02em;line-height:1.15}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:500}h1 .dot{color:var(--coral)}
+.lead{color:var(--ink-mute);font-size:17px;line-height:1.65;max-width:62ch;margin-top:14px}
+.tabs{display:flex;gap:10px;margin:26px 0 6px;flex-wrap:wrap}
+.tab{padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:transparent;font-weight:600;font-size:14px;cursor:pointer;font-family:var(--body)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.d-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;padding:32px 0 80px;align-items:start}
+.thread{border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);padding:22px;margin-bottom:16px}
+.thread h3{font-size:20px;line-height:1.2;letter-spacing:-.01em}
+.thread .q{font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:16px;line-height:1.65;margin-top:8px}
+.thread .meta{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.02em;color:var(--ink-faint);margin-top:12px}
+.thread .badge{color:var(--coral);font-weight:700}
+.thread.hide{display:none}
+.replies{margin-top:14px;border-top:1px dotted var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.reply{font-size:15.5px;line-height:1.65;background:color-mix(in oklch,var(--paper) 70%,white);border:1px solid var(--line-soft);border-radius:8px;padding:10px 14px}
+.reply b{font-size:14px}.reply time{font-family:var(--mono);font-size:11.5px;line-height:1.5;color:var(--ink-faint);margin-left:8px}
+.side{position:sticky;top:76px;display:flex;flex-direction:column;gap:18px}
+.rules,.ask{border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);padding:22px}
+.rules h2,.ask h2{font-size:20px;line-height:1.2;letter-spacing:-.01em;margin-bottom:10px}
+.rules ol{margin-left:20px;display:flex;flex-direction:column;gap:10px;font-size:15.5px;line-height:1.65;color:var(--ink-soft)}
+.ask textarea{width:100%;min-height:110px;border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:12px 14px;font-family:var(--body);font-size:15px;line-height:1.6;resize:vertical}
+.ask select{width:100%;margin:10px 0;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--paper);font-size:14.5px;line-height:1.6;font-family:var(--body)}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;font-size:14.5px;border:1px solid var(--ink);background:var(--ink);color:var(--bone);cursor:pointer;font-family:var(--body)}
+.side img{border-radius:12px;border:1px solid var(--line-soft);width:100%;aspect-ratio:16/10;object-fit:cover}
+@media(max-width:880px){.d-grid{grid-template-columns:1fr}.side{position:static}.site-nav .links{display:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Điều hướng chính"><div class="wrap">
+<a class="brand" href="trang-chu.html">Studium<i>.</i></a>
+<div class="links"><a href="trang-chu.html">Trang chủ</a><a href="thu-vien.html">Thư viện</a><a href="doi-thoai.html" aria-current="page">Đối thoại</a><a href="chuyen-de.html">Chuyên đề</a><a href="su-kien.html">Sự kiện</a></div><button class="theme-btn" type="button" aria-label="Bat che do toi" title="Toi / sang">☾</button><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button></div></nav>
+<main class="wrap">
+<header class="page-head" data-od-id="dialogue-head">
+<div class="eyebrow">03 · Phòng đối thoại</div>
+<h1>Tranh luận mà không <em>kẻ thắng</em><span class="dot">.</span></h1>
+<p class="lead">Mỗi chủ đề có người điều phối và trích dẫn gốc bắt buộc. Viết phản biện ngay dưới mỗi luồng — lập luận của bạn sẽ xuất hiện tức thì.</p>
+<div class="tabs" role="tablist" aria-label="Lọc cuộc đối thoại" data-od-id="dialogue-tabs">
+<button class="tab" role="tab" data-t="all" aria-selected="true">Tất cả</button>
+<button class="tab" role="tab" data-t="hot" aria-selected="false">Sôi nổi</button>
+<button class="tab" role="tab" data-t="new" aria-selected="false">Mới nhất</button>
+<button class="tab" role="tab" data-t="open" aria-selected="false">Chưa có lời giải</button>
+</div>
+</header>
+<div class="d-grid">
+<div data-od-id="dialogue-threads">
+<article class="thread" data-t="hot"><h3>Liệu “vô vi” của Lão Tử có phải là thụ động?</h3><p class="q">“Nếu không làm gì cả, xã hội có vận hành được không — hay vô vi chỉ dành cho bậc ẩn sĩ?”</p><div class="replies"><div class="reply"><b>Trang Hạ</b><time>điều phối · 2 tuần trước</time><br />Mời đọc Đạo Đức Kinh ch. 37 trước khi phản biện. Vô vi ≠ vô sở tác vi.</div><div class="reply"><b>Minh An</b><time>5 ngày trước</time><br />Vô vi là “không cưỡng”: người cai trị giỏi làm cho dân tưởng việc tự thành. Đó là chính trị học, không phải lười biếng.</div></div><div class="meta"><span class="badge">★ SÔI NỔI</span><span>42 phản biện</span><span>trích dẫn bắt buộc: ĐĐK 37</span></div></article>
+<article class="thread" data-t="new"><h3>Camus có thực sự “hạnh phúc” với Sisyphus?</h3><p class="q">“Kết luận ‘phải tưởng tượng Sisyphus hạnh phúc’ là minh triết hay chỉ là an ủi?”</p><div class="replies"><div class="reply"><b>Lan Vy</b><time>3 ngày trước</time><br />Hạnh phúc ở đây là hạnh phúc của kẻ minh mẫn: hòn đá lăn xuống, Sisyphus ý thức — và ý thức ấy là chiến thắng.</div></div><div class="meta"><span class="badge">● MỚI</span><span>31 phản biện</span><span>trích dẫn: Huyền thoại Sisyphus</span></div></article>
+<article class="thread" data-t="open"><h3>“Kỷ sở bất dục, vật thi ư nhân” có đủ làm nền cho đạo đức?</h3><p class="q">“Kỷ nguyên vàng tiêu cực: không làm hại đã đủ là người tốt chưa?”</p><div class="replies"><div class="reply"><b>Quốc Bảo</b><time>1 tuần trước</time><br />Khổng Tử còn có “kỷ dục lập nhi lập nhân” — mặt tích cực. Đừng tách nửa câu ra khỏi toàn bộ Luận Ngữ.</div></div><div class="meta"><span class="badge">○ CHƯA CÓ LỜI GIẢI</span><span>18 phản biện</span><span>trích dẫn: Luận Ngữ XV.24</span></div></article>
+<article class="thread" data-t="hot"><h3>Tự do của Sartre: giải phóng hay kết án?</h3><p class="q">“Nếu ‘bị kết án phải tự do’, thì trách nhiệm có đè bẹp con người hiện đại?”</p><div class="replies"><div class="reply"><b>An Nhiên</b><time>4 ngày trước</time><br />Sartre không cho ta lối thoát — và đó chính là phẩm giá: không đổ lỗi cho hoàn cảnh, gen hay số phận.</div></div><div class="meta"><span class="badge">★ SÔI NỔI</span><span>37 phản biện</span><span>trích dẫn: Hiện sinh &amp; nhân bản</span></div></article>
+</div>
+<aside class="side">
+<div class="rules" data-od-id="dialogue-rules"><h2>Bốn quy tắc tranh luận</h2>
+<ol><li><b>Nguyên tắc từ thiện:</b> diễn đạt lại ý đối phương cho đúng trước khi phản biện.</li><li><b>Trích dẫn bắt buộc:</b> mọi luận điểm cần neo vào một văn bản gốc.</li><li><b>Công kích luận điểm,</b> không công kích con người.</li><li><b>Kết bằng câu hỏi:</b> mỗi phản biện mở ra một câu hỏi mới.</li></ol></div>
+<div class="ask" data-od-id="dialogue-ask"><h2>Gửi phản biện của bạn</h2>
+<select id="target" aria-label="Chọn luồng"><option value="0">Luồng: Vô vi — thụ động?</option><option value="1">Luồng: Sisyphus hạnh phúc?</option><option value="2">Luồng: Kỷ sở bất dục?</option><option value="3">Luồng: Tự do Sartre?</option></select>
+<textarea id="txt" placeholder="Diễn đạt lại ý đối phương trước, rồi hãy phản biện…" aria-label="Nội dung phản biện"></textarea>
+<button class="btn" id="send" style="margin-top:12px;width:100%">Đăng phản biện</button></div>
+<img src="assets/work-2.png" alt="Bàn đối thoại triết học" />
+</aside>
+</div>
+</main>
+<script>
+var tabs=document.querySelectorAll('.tab'),ths=document.querySelectorAll('.thread');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+tabs.forEach(function(x){x.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');
+var f=t.dataset.t;ths.forEach(function(h){h.style.display=(f==='all'||h.dataset.t===f)?'':'none'});
+})});
+document.getElementById('send').addEventListener('click',function(){
+var v=document.getElementById('txt').value.trim();if(!v){document.getElementById('txt').focus();return}
+var box=ths[+document.getElementById('target').value].querySelector('.replies');
+var d=document.createElement('div');d.className='reply';
+d.innerHTML='<b>Bạn</b><time>vừa xong</time><br />'+v.replace(/</g,'&lt;');
+box.appendChild(d);document.getElementById('txt').value='';
+box.lastChild.scrollIntoView({block:'nearest'});
+});
+</script>
+<script>(function(){var k='tq-theme';function set(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(k,t)}catch(e){}document.querySelectorAll('.theme-btn').forEach(function(x){x.textContent=t==='dark'?'\u2600':'\u263e';x.setAttribute('aria-label',t==='dark'?'Che do sang':'Che do toi')})}try{var s=localStorage.getItem(k);if(s)set(s);else if(matchMedia('(prefers-color-scheme: dark)').matches)set('dark')}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.theme-btn');if(b)set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')})})();</script><script>(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.site-nav .links');if(!t||!l)return;t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?String.fromCharCode(10005):String.fromCharCode(9776);});l.addEventListener('click',function(e){if(e.target.closest('a')){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});window.addEventListener('resize',function(){if(window.innerWidth>880){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});})();</script></body>
+</html>

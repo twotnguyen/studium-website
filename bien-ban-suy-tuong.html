@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biên bản đọc chung kỳ VII — Suy tưởng · Studium</title>
+<meta name="description" content="Biên bản nhóm đọc chung Suy tưởng của Marcus Aurelius: buổi 1–2, quyển IV–V, luận điểm, trích dẫn và câu hỏi còn mở." />
+<link rel="stylesheet" href="atelier.css" />
+<style>
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--paper) 93%,transparent);backdrop-filter:blur(10px);border-bottom:1px dotted var(--line)}
+.site-nav .wrap{display:flex;align-items:center;gap:30px;padding-top:15px;padding-bottom:15px}
+.brand{font-family:var(--sans);font-weight:800;font-size:20px;text-decoration:none;color:inherit}.brand i{color:var(--coral);font-style:normal}
+.site-nav .links{display:flex;gap:22px;margin-left:auto;font-size:14.5px;font-weight:600}
+.site-nav .links a{text-decoration:none;color:inherit;opacity:.75}.site-nav .links a[aria-current]{opacity:1;border-bottom:2px solid var(--coral)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;margin-bottom:14px}
+.hero{padding:64px 0 36px;border-bottom:1px dotted var(--line)}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(32px,4.4vw,56px);letter-spacing:-.02em;line-height:1.15;max-width:22ch}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:500}h1 .dot{color:var(--coral)}
+.lead{color:var(--ink-mute);font-size:17px;line-height:1.65;max-width:64ch;margin-top:14px}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.meta div{border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);padding:16px 18px}
+.meta small{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase}
+.meta b{display:block;font-size:15.5px;line-height:1.4;margin-top:6px}.meta span{font-size:14px;line-height:1.6;color:var(--ink-mute)}
+.layout{display:grid;grid-template-columns:280px 1fr;gap:48px;padding:56px 0 80px;align-items:start}
+.toc{position:sticky;top:84px;border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);padding:22px}
+.toc h4{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--ink-mute);margin-bottom:12px}
+.toc a{display:block;font-size:14px;text-decoration:none;color:inherit;padding:6px 0;border-bottom:1px dotted var(--line-soft)}
+.toc a:last-child{border-bottom:0}
+.article{max-width:68ch}
+.article h2{font-family:var(--sans);font-size:clamp(24px,2.8vw,34px);font-weight:780;letter-spacing:-.015em;line-height:1.2;margin:48px 0 12px}
+.article h2:first-child{margin-top:0}
+.article h2 em{font-family:var(--serif);font-style:italic;font-weight:500}.article h2 .dot{color:var(--coral)}
+.article p{font-size:16px;line-height:1.7;color:var(--ink-soft);margin:12px 0}
+.article blockquote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.65;border-left:3px solid var(--coral);padding-left:16px;margin:20px 0;color:var(--ink)}
+.article blockquote cite{display:block;font-family:var(--mono);font-style:normal;font-size:12px;line-height:1.5;letter-spacing:.02em;color:var(--ink-faint);margin-top:8px}
+.note{border:1px solid var(--line-soft);border-radius:12px;background:var(--bone);padding:20px 22px;margin:24px 0;font-size:15.5px;line-height:1.65}
+.note b{color:var(--ink)}
+ul.tight{margin:12px 0 12px 20px;display:flex;flex-direction:column;gap:8px;font-size:15.5px;line-height:1.65;color:var(--ink-soft)}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.kv div{border-top:3px solid var(--coral);padding-top:12px;font-size:15px;line-height:1.65;color:var(--ink-mute)}
+.kv b{display:block;color:var(--ink);font-size:15.5px;line-height:1.4;margin-bottom:4px}
+.qa{border-bottom:1px dotted var(--line);padding:14px 0;font-size:15.5px;line-height:1.65}
+.qa b{color:var(--ink)}
+.next{display:flex;gap:20px;align-items:center;border:1px solid var(--line-soft);border-radius:14px;background:var(--ink);color:var(--bone);padding:28px;margin:40px 0}
+.next a{color:inherit;font-weight:700}
+.next .btn{display:inline-block;padding:12px 24px;border-radius:999px;background:var(--bone);color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;margin-top:12px}
+.figure img{width:100%;border-radius:14px;border:1px solid var(--line-soft);box-shadow:var(--shadow);aspect-ratio:16/9;object-fit:cover}
+.figure figcaption{font-size:13.5px;color:var(--ink-mute);margin-top:10px}
+[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+[data-reveal].in{opacity:1;transform:none}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.toc{position:static}.meta{grid-template-columns:1fr 1fr}.kv{grid-template-columns:1fr}.site-nav .links{display:none}}
+@media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Điều hướng chính"><div class="wrap">
+<a class="brand" href="trang-chu.html">Studium<i>.</i></a>
+<div class="links"><a href="trang-chu.html">Trang chủ</a><a href="thu-vien.html">Thư viện</a><a href="doi-thoai.html">Đối thoại</a><a href="chuyen-de.html">Chuyên đề</a><a href="su-kien.html">Sự kiện</a></div><button class="theme-btn" type="button" aria-label="Bật chế độ tối" title="Tối / sáng">☾</button><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button></div></nav>
+<main class="wrap">
+<header class="hero" data-od-id="minutes-hero">
+<div class="eyebrow">Biên bản · Nhóm đọc chung kỳ VII · Kỳ Suy tưởng</div>
+<h1>Đọc chung <em>Suy tưởng</em>: buổi 1–2<span class="dot">.</span></h1>
+<p class="lead">Ghi chép trung thực hai buổi đầu đọc Marcus Aurelius, quyển IV–V: ai nói gì, trích dẫn nào được viện dẫn, và những câu hỏi cả phòng cùng mang về nhà.</p>
+<div class="meta">
+<div><small>Buổi 1 · Quyển IV</small><b>20.09 · Hà Nội</b><span>26 người dự · điều phối: nhóm Khắc kỷ</span></div>
+<div><small>Buổi 2 · Quyển V</small><b>27.09 · Trực tuyến</b><span>31 người dự · điều phối: Minh An</span></div>
+<div><small>Văn bản đọc</small><b>Meditations IV–V</b><span>Bản dịch nào cũng được, đối chiếu Hammond &amp; Hays</span></div>
+<div><small>Thư ký biên bản</small><b>Thu Giang</b><span>Hiệu đính: nhóm điều phối · 28.09</span></div>
+</div>
+</header>
+<div class="layout">
+<aside class="toc" data-od-id="minutes-toc">
+<h4>Mục lục biên bản</h4>
+<a href="#tom-tat">1 · Tóm tắt một đoạn</a>
+<a href="#buoi-1">2 · Buổi 1 — cái nhìn từ trên cao</a>
+<a href="#buoi-2">3 · Buổi 2 — việc của buổi sáng</a>
+<a href="#tranh-luan">4 · Hai tranh luận nảy lửa</a>
+<a href="#cau-hoi">5 · Câu hỏi mang về</a>
+<a href="#ky-toi">6 · Kỳ tới đọc gì</a>
+</aside>
+<article class="article">
+<div class="figure" data-reveal><img src="assets/lab-1.png" alt="Không gian buổi đọc chung Suy tưởng" /><figcaption>Buổi 1 tại Hà Nội: vòng đọc to 40 phút trước khi đối thoại — mỗi người một đoạn, không chen ngang.</figcaption></div>
+<h2 id="tom-tat" data-reveal>Tóm tắt <em>một đoạn</em><span class="dot">.</span></h2>
+<p data-reveal>Hai buổi đầu cùng hỏi một câu: <b>Khắc kỷ có phải là cam chịu?</b> Phòng đọc đi đến đồng thuận rằng Suy tưởng không dạy chịu đựng thụ động mà dạy <b>phân biệt ranh giới kiểm soát</b> — rồi dồn toàn bộ năng lượng vào phần thuộc về mình: phán đoán, ý hướng, hành động công bằng. Quyển IV cho ta viễn cảnh vũ trụ; quyển V kéo ta về giường ngủ lúc bình minh.</p>
+<h2 id="buoi-1" data-reveal>Buổi 1 — cái nhìn <em>từ trên cao</em><span class="dot">.</span></h2>
+<p data-reveal>Đọc to quyển IV, cả phòng dừng lâu ở đoạn “nhìn xuống từ trên cao” (IV.3): tưởng tượng mình lơ lửng trên thành phố, thấy mọi ồn ào co lại thành hạt bụi. Chị Lan Anh (dự lần đầu) nói: đoạn này không làm chị thấy mình nhỏ bé, mà thấy <b>gánh nặng nhỏ đi</b> — deadline vẫn đó, nhưng nó thôi phình to bằng cả vũ trụ.</p>
+<blockquote data-reveal>“Mọi sự đều qua đi như dòng sông; cái tồn tại trôi tuột khỏi tay ta.”<cite>— Marcus Aurelius, Suy tưởng IV.43 (ý chính, đối chiếu hai bản dịch)</cite></blockquote>
+<div class="note" data-reveal><b>Luận điểm chốt buổi 1:</b> “View from above” không phải trốn chạy mà là <b>phép đo tỷ lệ</b> — đặt nỗi bực dọc cạnh dòng thời gian dài để lấy lại phán đoán tỉnh táo.</div>
+<h2 id="buoi-2" data-reveal>Buổi 2 — việc của <em>buổi sáng</em><span class="dot">.</span></h2>
+<p data-reveal>Buổi trực tuyến mở bằng đoạn V.1 nổi tiếng — sáng mùa đông không muốn rời giường. Điều phối viên yêu cầu mỗi người viết một câu “thức dậy để làm gì” trước khi bật mic. 31 câu trả lời hiện lên: từ “dậy để đưa con đi học đúng giờ” đến “dậy để không dối mình thêm một ngày”.</p>
+<blockquote data-reveal>“Buổi sáng khi ngại trỗi dậy, hãy nghĩ: ta thức dậy để làm công việc của con người.”<cite>— Suy tưởng V.1 (ý chính)</cite></blockquote>
+<div class="kv" data-reveal>
+<div><b>Nhị phân kiểm soát</b>Việc của ta: phán đoán, ý hướng, cách đối xử. Việc của đời: thời tiết, dư luận, kết quả. Lẫn lộn hai vế là nguồn gốc của bực dọc.</div>
+<div><b>Công việc của con người</b>Theo Marcus: sống có lý trí và vì cộng đồng. Không phải “thành công”, mà là làm tròn phận sự của một sinh vật có logos.</div>
+</div>
+<h2 id="tranh-luan" data-reveal>Hai tranh luận <em>nảy lửa</em><span class="dot">.</span></h2>
+<div class="qa" data-reveal><b>1. Khắc kỷ có vô cảm không?</b> — Bạn Quang dẫn IV.3 (“vũ trụ thờ ơ”) để hỏi: dửng dưng với khen chê có thành dửng dưng với người thân? Phòng đáp bằng V.6: Marcus vẫn biết ơn, vẫn yêu thương — chỉ từ chối để cảm xúc của người khác <b>viết hộ phán đoán</b> của mình. Kết luận tạm: vô cảm với ấn tượng, tận tâm với con người.</div>
+<div class="qa" data-reveal><b>2. “Thuận theo tự nhiên” nghĩa là gì?</b> — Hai phe: “thuận” = thuận vũ trụ hữu lý (logos) hay thuận bản tính riêng của mình? Điều phối viên chốt bằng cầu nối: với Marcus, bản tính riêng của con người <b>chính là</b> lý trí — nên hai đáp án là một, nhìn từ hai đầu.</div>
+<h2 id="cau-hoi" data-reveal>Câu hỏi <em>mang về</em><span class="dot">.</span></h2>
+<ul class="tight" data-reveal>
+<li>Nếu “việc của đời” chiếm 90% cuộc sống, 10% “việc của ta” có đủ để sống tốt không — hay chính cách cầm 10% ấy quyết định tất cả?</li>
+<li>Thực hành “nhìn từ trên cao” mỗi tối: viết 3 dòng nhật ký vũ trụ trong 7 ngày, buổi 3 cùng đọc lại.</li>
+<li>Đối chiếu một đoạn IV hoặc V giữa hai bản dịch khác nhau, ghi lại chỗ dịch lệch nghĩa nhất.</li>
+</ul>
+<h2 id="ky-toi" data-reveal>Kỳ tới <em>đọc gì</em><span class="dot">.</span></h2>
+<p data-reveal>Buổi 3 (04.10): quyển VI — phân biệt điều ta kiểm soát được, mang theo một tình huống bực dọc thật trong tuần để mổ xẻ. Buổi 4 (11.10): quyển VII + viết châm ngôn của chính mình. Người vắng buổi 1–2 vẫn tham gia được — đọc tóm tắt trong biên bản này và 20 trang quyển VI là đủ.</p>
+<div class="next" data-reveal data-od-id="minutes-next">
+<div><small style="font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--coral)">ĐỌC CHUNG KỲ VII · CÒN 6/30 CHỖ</small>
+<div style="font-size:22px;font-weight:800;margin:8px 0">Muốn dự buổi 3–4? Đăng ký trước 03.10.</div>
+<div style="font-size:14.5px;opacity:.85">Ghi tên “đã đọc biên bản kỳ VII” trong form — ban điều phối xếp chỗ ưu tiên.</div>
+<a class="btn" href="su-kien.html#register-form">Đăng ký buổi 3–4 →</a></div>
+</div>
+<p style="font-size:13.5px;color:var(--ink-faint)" data-reveal>Biên bản ghi theo trí nhớ tập thể, hiệu đính ngày 28.09. Trích dẫn tóm ý từ hai bản dịch phổ biến; số đoạn có thể lệch ±1 giữa các bản. Thiếu sót xin gửi về ban điều phối để bổ sung.</p>
+</article>
+</div>
+</main>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+</script>
+<script>(function(){var k='tq-theme';function set(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(k,t)}catch(e){}document.querySelectorAll('.theme-btn').forEach(function(x){x.textContent=t==='dark'?'\u2600':'\u263e';x.setAttribute('aria-label',t==='dark'?'Che do sang':'Che do toi')})}try{var s=localStorage.getItem(k);if(s)set(s);else if(matchMedia('(prefers-color-scheme: dark)').matches)set('dark')}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.theme-btn');if(b)set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')})})();</script>
+<script>(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.site-nav .links');if(!t||!l)return;t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?String.fromCharCode(10005):String.fromCharCode(9776);});l.addEventListener('click',function(e){if(e.target.closest('a')){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});window.addEventListener('resize',function(){if(window.innerWidth>880){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});})();</script></body>
+</html>

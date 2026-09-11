@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thư viện — Studium</title>
+<meta name="description" content="Thư viện luận giải triết học Đông Tây: trích dẫn gốc, tóm luận và nguồn tham khảo." />
+<link rel="stylesheet" href="atelier.css" />
+<style>
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--paper) 93%,transparent);backdrop-filter:blur(10px);border-bottom:1px dotted var(--line)}
+.site-nav .wrap{display:flex;align-items:center;gap:30px;padding-top:15px;padding-bottom:15px}
+.brand{font-family:var(--sans);font-weight:800;font-size:20px;text-decoration:none;color:inherit}.brand i{color:var(--coral);font-style:normal}
+.site-nav .links{display:flex;gap:22px;margin-left:auto;font-size:14.5px;font-weight:600}
+.site-nav .links a{text-decoration:none;color:inherit;opacity:.75}.site-nav .links a[aria-current]{opacity:1;border-bottom:2px solid var(--coral)}
+.page-head{padding:64px 0 30px;border-bottom:1px dotted var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;margin-bottom:14px}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(30px,4.2vw,52px);letter-spacing:-.015em;line-height:1.1}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:500}h1 .dot{color:var(--coral)}
+.lead{color:var(--ink-mute);font-size:17px;line-height:1.7;max-width:62ch;margin-top:14px}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 8px}
+.pill{padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:transparent;font-weight:600;font-size:14px;cursor:pointer;font-family:var(--body)}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.lib-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:36px 0 80px}
+.card{border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;background:var(--bone);display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.card .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--olive)}
+.card h3{font-size:18px;line-height:1.4}
+.card blockquote{font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.7;color:var(--ink-soft);border-left:3px solid var(--coral);padding-left:12px}
+.card p.sum{font-size:14px;line-height:1.7;color:var(--ink-mute)}
+.card .src{font-family:var(--mono);font-size:12px;color:var(--ink-faint);margin-top:auto;padding-top:8px;border-top:1px dotted var(--line)}
+.card.hide{display:none}
+.howto{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:0 0 80px;align-items:center}
+.howto img{width:100%;border-radius:14px;border:1px solid var(--line-soft);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover}
+ol.steps{margin:16px 0 0 20px;display:flex;flex-direction:column;gap:12px;color:var(--ink-soft);font-size:15.5px;line-height:1.7}
+[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+[data-reveal].in{opacity:1;transform:none}
+@media(max-width:880px){.lib-grid{grid-template-columns:1fr}.howto{grid-template-columns:1fr}.site-nav .links{display:none}}
+@media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Điều hướng chính"><div class="wrap">
+<a class="brand" href="trang-chu.html">Studium<i>.</i></a>
+<div class="links"><a href="trang-chu.html">Trang chủ</a><a href="thu-vien.html" aria-current="page">Thư viện</a><a href="doi-thoai.html">Đối thoại</a><a href="chuyen-de.html">Chuyên đề</a><a href="su-kien.html">Sự kiện</a></div><button class="theme-btn" type="button" aria-label="Bat che do toi" title="Toi / sang">☾</button><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button></div></nav>
+<main class="wrap">
+<header class="page-head" data-od-id="library-head">
+<div class="eyebrow">02 · Thư viện nghiên cứu</div>
+<h1>Đọc gốc, hiểu sâu, <em>trích đúng</em><span class="dot">.</span></h1>
+<p class="lead">Mỗi luận giải gồm ba lớp: trích dẫn nguyên văn — tóm luận dễ hiểu — nguồn tham khảo để đọc tiếp. Lọc theo trường phái để bắt đầu.</p>
+<div class="pills" role="group" aria-label="Lọc theo trường phái" data-od-id="library-filters">
+<button class="pill" data-f="all" aria-pressed="true">Tất cả</button>
+<button class="pill" data-f="khac-ky" aria-pressed="false">Khắc kỷ</button>
+<button class="pill" data-f="hien-sinh" aria-pressed="false">Hiện sinh</button>
+<button class="pill" data-f="lao-trang" aria-pressed="false">Lão Trang</button>
+<button class="pill" data-f="phat-hoc" aria-pressed="false">Phật học</button>
+<button class="pill" data-f="khong-hoc" aria-pressed="false">Khổng học</button>
+<button class="pill" data-f="hy-lap" aria-pressed="false">Hy Lạp cổ điển</button>
+</div>
+<p id="lib-count" style="font-family:var(--mono);font-size:13px;color:var(--ink-mute);margin-top:14px" aria-live="polite"></p>
+</header>
+<div class="lib-grid" data-od-id="library-grid">
+<article class="card" data-cat="khac-ky" id="dich-phan"><img src="assets/lab-1.png" alt="Minh họa nhị phân kiểm soát của Epictetus" /><div class="body"><div class="tag">Khắc kỷ · Epictetus</div><h3>Nhị phân kiểm soát: việc của ta, việc của đời</h3><blockquote>“Có những thứ thuộc về ta, và có những thứ không thuộc về ta.” — Enchiridion, §1</blockquote><p class="sum">Mọi khổ đau bắt đầu từ nhầm lẫn ranh giới này. Bài viết phân tích 3 bước thực hành Prohairesis mỗi sáng.</p><div class="src">Nguồn: Enchiridion · Suy tưởng IV.3 · Seneca, Thư 71</div></div></article>
+<article class="card" data-cat="khac-ky" id="amor-fati"><img src="assets/lab-5.png" alt="Minh họa amor fati" /><div class="body"><div class="tag">Khắc kỷ · Nietzsche tiếp biến</div><h3>Amor fati — yêu lấy số phận</h3><blockquote>“Đừng mong mọi sự theo ý mình; hãy muốn mọi sự như chúng là.” — Epictetus</blockquote><p class="sum">Từ premeditatio malorum đến amor fati: khác nhau một chữ “yêu”, khác nhau cả một đời.</p><div class="src">Nguồn: Enchiridion §8 · Marcus Aurelius VII.54</div></div></article>
+<article class="card" data-cat="hien-sinh" id="phi-ly"><img src="assets/method-1.png" alt="Minh họa phi lý của Camus" /><div class="body"><div class="tag">Hiện sinh · Camus</div><h3>Phi lý và nổi loạn: đọc lại Sisyphus</h3><blockquote>“Cuộc đấu tranh lên đỉnh núi tự nó đủ làm đầy trái tim con người.” — Huyền thoại Sisyphus</blockquote><p class="sum">Phi lý không phải tuyệt vọng; nó là điểm khởi đầu của tự do và sự nổi loạn minh mẫn.</p><div class="src">Nguồn: Le Mythe de Sisyphe (1942) · Caligula</div></div></article>
+<article class="card" data-cat="hien-sinh" id="hien-sinh"><img src="assets/method-2.png" alt="Minh họa hiện hữu của Sartre" /><div class="body"><div class="tag">Hiện sinh · Sartre</div><h3>Hiện hữu đi trước bản chất — tự do đáng sợ</h3><blockquote>“Con người bị kết án phải tự do.” — Thuyết hiện sinh là một thuyết nhân bản</blockquote><p class="sum">Không có bản thiết kế sẵn cho đời bạn. Hiểu “thuyết ngụy tín” để ngừng dối mình.</p><div class="src">Nguồn: L'existentialisme est un humanisme (1946)</div></div></article>
+<article class="card" data-cat="lao-trang" id="lao-trang"><img src="assets/method-3.png" alt="Minh họa vô vi Lão Trang" /><div class="body"><div class="tag">Lão Trang · Đạo Đức Kinh</div><h3>Vô vi không phải thụ động</h3><blockquote>“Đạo thường vô vi mà không gì không làm.” — Đạo Đức Kinh, ch. 37</blockquote><p class="sum">Vô vi là hành động thuận theo bản tính sự vật — như nước chảy mà mòn được đá.</p><div class="src">Nguồn: Đạo Đức Kinh 37, 48 · Trang Tử, Tiêu Dao Du</div></div></article>
+<article class="card" data-cat="phat-hoc" id="phat-hoc"><img src="assets/method-4.png" alt="Minh họa duyên khởi" /><div class="body"><div class="tag">Phật học · Duyên khởi</div><h3>Duyên khởi và tính Không: không gì tự tồn tại</h3><blockquote>“Cái này có nên cái kia có; cái này sinh nên cái kia sinh.” — Tương Ưng Bộ</blockquote><p class="sum">Hiểu pratītyasamutpāda để thấy ngã chấp rã rời — và từ bi có chỗ đứng.</p><div class="src">Nguồn: Tương Ưng Bộ 12 · Trung Luận của Long Thọ</div></div></article>
+<article class="card" data-cat="khong-hoc" id="khong-hoc"><img src="assets/lab-4.png" alt="Minh họa nhân lễ Khổng học" /><div class="body"><div class="tag">Khổng học · Luận Ngữ</div><h3>Nhân, Lễ, Nghĩa — trật tự của hòa khí</h3><blockquote>“Kỷ sở bất dục, vật thi ư nhân.” — Luận Ngữ, Vệ Linh Công</blockquote><p class="sum">Nhân là gốc, lễ là hình, nghĩa là thước. Đọc Khổng Tử như một triết lý quan hệ.</p><div class="src">Nguồn: Luận Ngữ · Mạnh Tử · Đại Học</div></div></article>
+<article class="card" data-cat="hy-lap" id="ergon"><img src="assets/lab-3.png" alt="Minh họa ergon và arete" /><div class="body"><div class="tag">Hy Lạp cổ điển · Aristotle</div><h3>Ergon và Aretē — con người “để làm gì”?</h3><blockquote>“Hạnh phúc là hoạt động của linh hồn theo đức hạnh hoàn hảo.” — EN I.7</blockquote><p class="sum">Lập luận chức năng (ergon argument): như dao tốt là dao sắc, người tốt là người sống theo aretē.</p><div class="src">Nguồn: Nicomachean Ethics I.7 · X.7–8</div></div></article>
+<article class="card" data-cat="hy-lap" id="cong-hoa"><img src="assets/capabilities.png" alt="Minh họa Cộng hòa của Plato" /><div class="body"><div class="tag">Hy Lạp cổ điển · Plato · Loạt 6 kỳ</div><h3>Về Cộng Hòa: công lý trong thành phố và linh hồn</h3><blockquote>“Cho đến khi triết gia làm vua, thành phố sẽ không hết họa.” — Cộng Hòa V</blockquote><p class="sum">Từ ẩn dụ hang động đến triết vương: loạt bài dẫn đọc toàn bộ Politeia trong 6 tuần.</p><div class="src">Nguồn: Plato, Politeia · bản dịch Bloom / Grube</div></div></article>
+</div>
+<div id="lib-empty" hidden style="border:1px dashed var(--line);border-radius:12px;padding:28px;margin-bottom:40px;color:var(--ink-mute);font-size:15px">Không có luận giải nào thuộc trường phái này. Thử chọn “Tất cả” hoặc gợi ý chủ đề mới tại <a href="doi-thoai.html">phòng đối thoại</a>.</div>
+<div class="howto">
+<img src="assets/about.png" alt="Phương pháp đọc triết học" data-reveal />
+<div data-reveal data-od-id="library-method">
+<div class="eyebrow">Đọc thế nào cho sâu</div>
+<h1 style="font-size:clamp(26px,3vw,38px)">Ba vòng <em>đọc triết</em><span class="dot">.</span></h1>
+<ol class="steps">
+<li><b>Vòng 1 — Gặp gỡ:</b> đọc trích dẫn gốc thành tiếng, gạch chân từ khóa Hy Lạp / Hán văn.</li>
+<li><b>Vòng 2 — Đối chất:</b> tóm luận bằng lời mình trong 5 câu, rồi so với luận giải trong bài.</li>
+<li><b>Vòng 3 — Sống cùng:</b> mang một câu hỏi ra <a href="doi-thoai.html">phòng đối thoại</a> và thực hành một tuần.</li>
+</ol>
+</div>
+</div>
+</main>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+var pills=document.querySelectorAll('.pill'),cards=document.querySelectorAll('.card'),count=document.getElementById('lib-count'),empty=document.getElementById('lib-empty');
+function applyFilter(f,push){var n=0;cards.forEach(function(c){var show=(f==='all'||c.dataset.cat===f);c.classList.toggle('hide',!show);if(show)n++});if(count)count.textContent='Hiển thị '+n+' / '+cards.length+' luận giải'+(f==='all'?' — tất cả trường phái':' — '+document.querySelector('.pill[data-f=\"'+f+'\"]').textContent);if(empty)empty.hidden=n>0;try{if(push!==false&&('URLSearchParams' in window)) {var u=new URL(location.href);if(f==='all')u.searchParams.delete('truong-phai');else u.searchParams.set('truong-phai',f);history.replaceState(null,'',u)}}catch(e){}}
+pills.forEach(function(p){p.addEventListener('click',function(){pills.forEach(function(x){x.setAttribute('aria-pressed','false')});p.setAttribute('aria-pressed','true');applyFilter(p.dataset.f)})});
+try{var q=new URLSearchParams(location.search).get('truong-phai');if(q&&document.querySelector('.pill[data-f=\"'+q+'\"]')){pills.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.f===q?'true':'false')});applyFilter(q,false)}}catch(e){}
+applyFilter(document.querySelector('.pill[aria-pressed=\"true\"]').dataset.f,false);
+</script>
+<script>(function(){var k='tq-theme';function set(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(k,t)}catch(e){}document.querySelectorAll('.theme-btn').forEach(function(x){x.textContent=t==='dark'?'\u2600':'\u263e';x.setAttribute('aria-label',t==='dark'?'Che do sang':'Che do toi')})}try{var s=localStorage.getItem(k);if(s)set(s);else if(matchMedia('(prefers-color-scheme: dark)').matches)set('dark')}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.theme-btn');if(b)set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')})})();</script><script>(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.site-nav .links');if(!t||!l)return;t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?String.fromCharCode(10005):String.fromCharCode(9776);});l.addEventListener('click',function(e){if(e.target.closest('a')){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});window.addEventListener('resize',function(){if(window.innerWidth>880){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent=String.fromCharCode(9776);}});})();</script></body>
+</html>
