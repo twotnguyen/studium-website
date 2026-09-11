@@ -1884,6 +1884,7 @@ body,.site-nav,.toc,.mnote,.truong,.post,.thread{transition:background-color .35
 .nav-toggle:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
 @media (max-width:880px){
 .site-nav .wrap{position:relative}
+.site-nav .wrap .theme-btn{margin-left:auto}
 .site-nav .wrap .nav-toggle{display:inline-flex}
 .site-nav .wrap .links{position:absolute;top:calc(100% + 1px);left:0;right:0;display:none;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line-soft);box-shadow:var(--shadow);padding:6px 28px 14px;z-index:60;margin-left:0}
 .site-nav .wrap .links.open{display:flex}
